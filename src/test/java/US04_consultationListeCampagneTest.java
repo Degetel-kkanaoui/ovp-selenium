@@ -10,7 +10,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import com.thoughtworks.selenium.Selenium;
 
 
-public class US04_consultationListeCampagne {
+public class US04_consultationListeCampagneTest {
 
 	WebDriver driver;
 	Selenium selenium;
@@ -39,8 +39,8 @@ public class US04_consultationListeCampagne {
 		assertTrue(selenium.isElementPresent("//div[@class='span8 centered well container-campaign-list']"));
 		assertTrue(selenium.isTextPresent("Vos campagnes"));
 		assertTrue(selenium.isTextPresent("Nom de la campagne"));
-		//assertTrue(selenium.isTextPresent("Dernière mise à jour"));
-		assertTrue(selenium.isTextPresent("Date de début/ fin de la campagne"));
+		//assertTrue(selenium.isTextPresent("Derniï¿½re mise ï¿½jour"));
+		assertTrue(selenium.isTextPresent("Date de dï¿½but/ fin de la campagne"));
 		assertTrue(selenium.isTextPresent("Actions"));
 		// VÃ©rifier que le picto "Statistiques" est prÃ©sent
 		assertTrue(selenium.isElementPresent("//tbody[@id='campaignListTbody']/tr/td[4]/a[2]/img"));

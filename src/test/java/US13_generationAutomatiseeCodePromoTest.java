@@ -9,7 +9,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 import com.thoughtworks.selenium.Selenium;
 
-public class US13_generationAutomatiseeCodePromo {
+public class US13_generationAutomatiseeCodePromoTest {
 
 	WebDriver driver;
 	Selenium selenium;

@@ -10,7 +10,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 import com.thoughtworks.selenium.Selenium;
 
-public class US27_gestionCodeVoucher {
+public class US27_gestionCodeVoucherTest {
 
 	WebDriver driver;
 	Selenium selenium;

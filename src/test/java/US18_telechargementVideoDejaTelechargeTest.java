@@ -10,7 +10,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 import com.thoughtworks.selenium.Selenium;
 
-public class US18_telechargementVideoDejaTelecharge {
+public class US18_telechargementVideoDejaTelechargeTest {
 
 	WebDriver driver;
 	Selenium selenium;

@@ -10,7 +10,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 import com.thoughtworks.selenium.Selenium;
 
-public class US36_consultationFicheVideo {
+public class US36_consultationFicheVideoTest {
 
 	WebDriver driver;
 	Selenium selenium;
@@ -52,11 +52,11 @@ public class US36_consultationFicheVideo {
 		String lgNomDansListe;
 		
 		selenium.open("/ovp-web/catalogue.html");
-		// Le clic sur une vidéo emméne sur sa fiche détaillé
+		// Le clic sur une vidï¿½o emmï¿½ne sur sa fiche dï¿½taillï¿½
 		String titreVideoCarroussel = selenium.getText("css=h1");
 		System.out.println(titreVideoCarroussel);
-		// Récupérer le nombre de vidéo dans le carroussel
-		String k = "2";   //Commencer par la vidéo 2 pour tester le carroussel
+		// Rï¿½cupï¿½rer le nombre de vidï¿½o dans le carroussel
+		String k = "2";   //Commencer par la vidï¿½o 2 pour tester le carroussel
 		int intk = Integer.parseInt(k);
 		
 		Number nombreVideoCarroussel = selenium.getXpathCount("//li[@class='roundabout-moveable-item']");
@@ -87,9 +87,9 @@ public class US36_consultationFicheVideo {
 		    
 			
 		}
-		// Affichage de la fiche vidéo 
+		// Affichage de la fiche vidï¿½o 
 		selenium.click("xpath=(//li[@id='videoBlocDefault']/a)[" + k + "]");
-		// Vérifier que le titre de la vidéo du carroussel correspond au titre de la fiche détaillée
+		// Vï¿½rifier que le titre de la vidï¿½o du carroussel correspond au titre de la fiche dï¿½taillï¿½e
 		System.out.println("Fiche carroussel = "+titreVideoC);
 		//a voir
 		selenium.waitForPageToLoad("30000");
@@ -100,14 +100,14 @@ public class US36_consultationFicheVideo {
 		
 		selenium.waitForPageToLoad("30000");
 		String titreVideoFiche = selenium.getText("id=videoTitle");
-		System.out.println("Fiche vidéo = "+titreVideoFiche);
+		System.out.println("Fiche vidï¿½o = "+titreVideoFiche);
 		assertEquals(titreVideoC, titreVideoFiche);
 		assertTrue(selenium.isElementPresent("//aside[@id='listVideo']"));
-		System.out.println("Réintégrer ce test \"verifyElementPresent //aside[@style='display: block; background-color: rgb(33, 33, 33);']\"");
-		// Récupération du nombre de vidéo parmi la liste
+		System.out.println("Rï¿½intï¿½grer ce test \"verifyElementPresent //aside[@style='display: block; background-color: rgb(33, 33, 33);']\"");
+		// Rï¿½cupï¿½ration du nombre de vidï¿½o parmi la liste
 		Number nombreVideo = selenium.getXpathCount("//li[@style='display: list-item;']");
 		System.out.println(nombreVideo);
-		// Le compteur de vidéo 'cptVideo' est initialisé à  1 pour récupéré la premiére vidéo de la liste afin de l'analyser
+		// Le compteur de vidï¿½o 'cptVideo' est initialisï¿½ ï¿½ 1 pour rï¿½cupï¿½rï¿½ la premiï¿½re vidï¿½o de la liste afin de l'analyser
 		cptVideo = "1";
 		System.out.println(cptVideo);
 		
@@ -119,12 +119,12 @@ public class US36_consultationFicheVideo {
 			String longueurNom = selenium.getEval(selenium.getEval("'" + nomVideo + "'.length"));
 			int intLongueurNom = Integer.parseInt(longueurNom);
 			if(intLongueurNom >= 11){
-				// Récupération des dix premiers caractéres à  partir du titre de la vidéo
+				// Rï¿½cupï¿½ration des dix premiers caractï¿½res ï¿½ partir du titre de la vidï¿½o
 				selenium.click("xpath=(//li[@id='miniVideoBlocDefault']/a)[" + cptVideo + "]");
 				selenium.waitForPageToLoad("30000");
 				String videoTitle = selenium.getText("id=videoTitle");
 				System.out.println(videoTitle);				
-				// Retour à  la fiche vidéo précédente
+				// Retour ï¿½ la fiche vidï¿½o prï¿½cï¿½dente
 				//String back = selenium.getEval(cptVideo + "-1");
 				String back = selenium.getEval(cptVideo);
 				selenium.open("/ovp-web/videoDetails.html?campaignId=1&videoId=" + back);
@@ -155,7 +155,7 @@ public class US36_consultationFicheVideo {
 				System.out.println(recupereTitreV);
 				// Comparaison du nom construit avec les points de suspensions avec le nom affichÃ© dans la liste des vidÃ©os
 				assertEquals(recupereTitreV, nomVideo);
-				System.out.println("La nom de la vidéo "+nomVideo+" est bien testé");
+				System.out.println("La nom de la vidï¿½o "+nomVideo+" est bien testï¿½");
 				
 				cptVideo = selenium.getEval(cptVideo + "+1");
 				intCptVideo=Integer.parseInt(cptVideo);

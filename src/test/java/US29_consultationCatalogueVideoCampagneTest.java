@@ -9,7 +9,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 import com.thoughtworks.selenium.Selenium;
 
-public class US29_consultationCatalogueVideoCampagne {
+public class US29_consultationCatalogueVideoCampagneTest {
 
 	WebDriver driver;
 	Selenium selenium;

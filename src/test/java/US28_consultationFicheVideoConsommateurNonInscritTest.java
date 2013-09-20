@@ -11,7 +11,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import com.thoughtworks.selenium.Selenium;
 
 
-public class US28_consultationFicheVideoConsommateurNonInscrit {
+public class US28_consultationFicheVideoConsommateurNonInscritTest {
 
 	WebDriver driver;
 	Selenium selenium;
